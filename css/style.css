@@ -25,6 +25,8 @@ body {
     padding: 50px 20px 30px;
 }
 
+
+
 .site-header h1 {
     margin: 0;
     font-size: 32px;
@@ -39,6 +41,59 @@ body {
     opacity: 0.6;
 }
 
+.site-subtitle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.site-subtitle-row p {
+    margin: 0;
+}
+
+.subtitle-divider {
+    color: #393d3f;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    color: #666b6d;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.language-button:hover {
+    color: #aaa49a;
+}
+
+.language-button.active {
+    color: #75694f;
+}
+
+.language-divider {
+    color: #393d3f;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
 
 /* =========================
    Cards container
