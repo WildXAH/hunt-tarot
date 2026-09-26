@@ -27,38 +27,65 @@
         HUNT: SHOWDOWN
     </h1>
 
-    <div class="site-subtitle-row">
+<div class="site-subtitle-row">
 
-        <p id="page-subtitle">
-            Tarot Cards
-        </p>
+    <p id="page-subtitle">Tarot Cards</p>
 
-        <span class="subtitle-divider">|</span>
+    <span class="subtitle-divider">|</span>
 
-        <div
-            class="language-switcher"
-            id="language-switcher"
+    <div class="language-switcher" id="language-switcher">
+
+        <button
+            type="button"
+            class="language-button active"
+            data-language="ru"
         >
-            <button
-                type="button"
-                class="language-button active"
-                data-language="ru"
-            >
-                RU
-            </button>
+            RU
+        </button>
 
-            <span class="language-divider">/</span>
+        <span class="language-divider">/</span>
 
-            <button
-                type="button"
-                class="language-button"
-                data-language="en"
-            >
-                EN
-            </button>
-        </div>
+        <button
+            type="button"
+            class="language-button"
+            data-language="en"
+        >
+            EN
+        </button>
 
     </div>
+
+    <span class="subtitle-divider">|</span>
+
+    <div class="view-switcher" id="view-switcher">
+
+        <button
+            type="button"
+            class="view-button active"
+            data-view="cards"
+            aria-label="Cards view"
+            title="Cards"
+        >
+            ▦
+        </button>
+
+        <span class="view-divider">/</span>
+
+        <button
+            type="button"
+            class="view-button"
+            data-view="overview"
+            aria-label="Overview view"
+            title="Overview"
+        >
+            ▦
+        </button>
+
+    </div>
+
+</div>
+
+
 
 </header>
 
@@ -66,7 +93,7 @@
     <!-- =========================
          Search
          ========================= -->
-
+<div class="card-controls" id="card-controls">
     <section class="search-section">
 
         <label
@@ -96,7 +123,7 @@
         ></p>
 
     </section>
-
+</div>
 
     <!-- =========================
          Tarot cards

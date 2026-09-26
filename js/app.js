@@ -1,5 +1,9 @@
 const cardsContainer = document.querySelector(".cards-container");
 
+const viewSwitcher = document.querySelector("#view-switcher");
+const viewButtons = document.querySelectorAll(".view-button");
+const cardControls = document.querySelector("#card-controls");
+
 const searchInput = document.querySelector("#search-input");
 const searchResults = document.querySelector("#search-results");
 const categoryFilters = document.querySelector("#category-filters");
@@ -40,6 +44,60 @@ let currentLanguage =
 let activeCategory = "All";
 let currentCards = tarotCards;
 let currentCardIndex = 0;
+
+let currentView =
+    localStorage.getItem("tarot-view") || "cards";
+
+/* =========================
+   View switcher
+   ========================= */
+
+function updateViewButtons() {
+
+    viewButtons.forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.view === currentView
+        );
+
+    });
+
+}
+
+
+function setView(view) {
+
+    currentView = view;
+
+    localStorage.setItem(
+        "tarot-view",
+        currentView
+    );
+
+    cardsContainer.classList.toggle(
+        "overview-view",
+        currentView === "overview"
+    );
+
+    cardControls.classList.toggle(
+        "is-hidden",
+        currentView === "overview"
+    );
+
+    updateViewButtons();
+}
+
+
+viewButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        setView(button.dataset.view);
+
+    });
+
+});
 
 
 /* =========================
@@ -800,5 +858,9 @@ document.addEventListener(
 /* =========================
    Initial render
    ========================= */
+
+setView(currentView);
+
+renderCards(tarotCards);
 
 updateInterfaceLanguage();

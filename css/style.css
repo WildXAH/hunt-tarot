@@ -96,6 +96,48 @@ body {
 }
 
 /* =========================
+   View switcher
+   ========================= */
+
+.view-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-button {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #666b6d;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.view-button:hover {
+    color: #aaa49a;
+}
+
+.view-button.active {
+    color: #75694f;
+}
+
+.view-divider {
+    color: #393d3f;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+/* =========================
    Cards container
    ========================= */
 
@@ -106,6 +148,53 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+/* =========================
+   Overview view
+   ========================= */
+
+.cards-container.overview-view {
+    width: min(1400px, 94%);
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.cards-container.overview-view .tarot-card {
+    background-color: #11171b;
+}
+
+.cards-container.overview-view .card-info {
+    display: block;
+    padding: 10px 8px 12px;
+}
+
+.cards-container.overview-view .card-name {
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.cards-container.overview-view .card-effect {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #aaa49a;
+}
+
+.card-controls.is-hidden {
+    display: none;
+}
+
+.cards-container.overview-view .card-warning {
+    display: none;
+}
+
+.cards-container.overview-view .card-image {
+    width: 100%;
+}
+
+.cards-container.overview-view .card-image img {
+    width: 100%;
+    height: auto;
 }
 
 /* =========================
