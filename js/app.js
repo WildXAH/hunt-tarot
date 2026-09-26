@@ -25,6 +25,8 @@ const languageButtons = document.querySelectorAll("[data-language]");
 
 const pageTitle = document.querySelector("#page-title");
 const pageSubtitle = document.querySelector("#page-subtitle");
+const footerStatus = document.getElementById("footer-status");
+const footerRights = document.getElementById("footer-rights");
 const searchLabel = document.querySelector("#search-label");
 const descriptionTitle = document.querySelector("#description-title");
 const keywordsTitle = document.querySelector("#keywords-title");
@@ -80,7 +82,11 @@ const translations = {
             one: "карта найдена",
             few: "карты найдено",
             many: "карт найдено"
-        }
+        },
+
+        footerStatus: "Неофициальный некоммерческий фанатский проект",
+
+        footerRights: "Hunt: Showdown и связанные с ним материалы являются собственностью Crytek GmbH. Этот проект не связан с Crytek и не одобрен компанией.",
     },
 
     en: {
@@ -117,7 +123,11 @@ const translations = {
             one: "card found",
             few: "cards found",
             many: "cards found"
-        }
+        },
+
+        footerStatus: "Unofficial non-commercial fan project",
+
+        footerRights: "Hunt: Showdown and related assets are trademarks and property of Crytek GmbH. This project is not affiliated with or endorsed by Crytek.",
     }
 };
 
@@ -172,6 +182,9 @@ function updateInterfaceLanguage() {
     if (pageSubtitle) {
         pageSubtitle.textContent = t.pageSubtitle;
     }
+
+    footerStatus.textContent = t.footerStatus;
+    footerRights.textContent = t.footerRights;
 
     if (searchLabel) {
         searchLabel.textContent = t.searchLabel;
