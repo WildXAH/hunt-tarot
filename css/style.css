@@ -175,8 +175,8 @@ body {
 }
 
 .cards-container.overview-view .card-effect {
-    font-size: 11px;
-    line-height: 1.4;
+    font-size: 13px;
+    line-height: 1.45;
     color: #aaa49a;
 }
 
@@ -184,6 +184,7 @@ body {
     display: none;
 }
 
+.cards-container.overview-view .card-category,
 .cards-container.overview-view .card-warning {
     display: none;
 }
