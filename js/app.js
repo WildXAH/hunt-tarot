@@ -642,6 +642,8 @@ function openModal(card) {
 
 
     modal.classList.add("is-open");
+
+    document.body.style.overflow = "hidden";
 }
 
 
@@ -711,6 +713,8 @@ function closeModal() {
     modal.classList.remove(
         "is-open"
     );
+
+    document.body.style.overflow = "";
 
 }
 

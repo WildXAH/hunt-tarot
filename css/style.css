@@ -670,122 +670,136 @@ body {
        Modal content
        ========================= */
 
-    .modal-content {
-        display: flex;
-        flex-direction: column;
+/* =========================
+   Modal
+   ========================= */
 
-        width: 100%;
-        max-width: 500px;
+.modal {
+    align-items: flex-start;
 
-        max-height: 95vh;
+    padding: 15px;
 
-        margin: auto 0;
-
-        padding-bottom: 60px;
-
-        overflow: visible;
-    }
+    overflow: hidden;
+}
 
 
-    /* =========================
-       Modal image
-       ========================= */
+/* Modal content */
 
-    .modal-image {
-        flex-shrink: 0;
+.modal-content {
+    display: flex;
+    flex-direction: column;
 
-        max-height: 55vh;
-    }
+    width: 100%;
+    max-width: 500px;
 
-    .modal-image img {
-        display: block;
+    height: 95vh;
+    max-height: 95vh;
 
-        width: 100%;
-        height: auto;
+    margin: auto 0;
 
-        max-height: 55vh;
+    padding-bottom: 60px;
 
-        object-fit: contain;
-    }
+    overflow: visible;
+}
 
 
-    /* =========================
-       Modal information
-       ========================= */
+/* Modal image */
 
-    .modal-info {
-        flex: 1;
+.modal-image {
+    flex-shrink: 0;
 
-        padding: 22px;
+    max-height: 55vh;
 
-        overflow-y: auto;
-        max-height: calc(95vh - 55vh - 60px);
+    overflow: hidden;
+}
 
-        -webkit-overflow-scrolling: touch;
-    }
+.modal-image img {
+    display: block;
 
-    .modal-info h2 {
-        font-size: 22px;
-    }
+    width: 100%;
+    height: auto;
 
-    .modal-effect {
-        margin: 20px 0;
+    max-height: 55vh;
 
-        font-size: 16px;
-    }
+    object-fit: contain;
+}
 
 
-    /* =========================
-       Mobile navigation
-       ========================= */
+/* Modal information */
 
-    .modal-nav {
-        position: absolute;
+.modal-info {
+    flex: 1;
+    min-height: 0;
 
-        top: auto;
-        bottom: 12px;
+    padding: 22px;
 
-        z-index: 5;
+    overflow-y: auto;
 
-        width: 36px;
-        height: 36px;
+    max-height: none;
 
-        border: 1px solid #393d3f;
+    -webkit-overflow-scrolling: touch;
+}
 
-        background-color: #11171b;
+.modal-info h2 {
+    font-size: 22px;
+}
 
-        color: #aaa49a;
+.modal-effect {
+    margin: 20px 0;
 
-        font-size: 18px;
-    }
+    font-size: 16px;
+}
 
-    .modal-nav::before {
-        content: "";
 
-        position: absolute;
+/* Mobile navigation */
 
-        top: -13px;
-        left: 50%;
+.modal-nav {
+    position: absolute;
 
-        width: 120px;
-        height: 1px;
+    top: auto;
+    bottom: 12px;
 
-        background-color: #292f32;
+    z-index: 5;
 
-        transform: translateX(-50%);
-    }
+    width: 36px;
+    height: 36px;
 
-    .modal-prev {
-        left: 50%;
+    border: 1px solid #393d3f;
 
-        transform: translateX(-45px);
-    }
+    background-color: #11171b;
 
-    .modal-next {
-        right: 50%;
+    color: #aaa49a;
 
-        transform: translateX(45px);
-    }
+    font-size: 18px;
+}
+
+.modal-nav::before {
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    width: 120px;
+    height: 1px;
+
+    background-color: #292f32;
+
+    transform: translateX(-50%);
+}
+
+.modal-prev {
+    left: 50%;
+
+    transform: translateX(-45px);
+}
+
+.modal-next {
+    right: 50%;
+
+    transform: translateX(45px);
+}
 
 
     /* =========================
